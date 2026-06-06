@@ -1,0 +1,6 @@
+{
+  "name": "Multi-Branch POS System",
+  "description": "Enterprise-grade Multi-Branch Point of Sale (POS) system equipped with real-time order workflows, custom client portal, inventory stock allocation, expense records, supplier sheets, credit debt ledgers, and one-click direct sync to Supabase databases.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
