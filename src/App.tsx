@@ -224,7 +224,7 @@ export default function App() {
   };
 
   const handleAddCreditPayment = async (newPayment: CreditPayment) => {
-    await POSDatabase.insertOrUpdate('pos_payments', newPayment, POSDatabase.getPayments, POSDatabase.savePayments);
+    await POSDatabase.insertOrUpdate('credit_payments', newPayment, POSDatabase.getPayments, POSDatabase.savePayments);
     reloadAllData();
   };
 
