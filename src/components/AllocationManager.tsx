@@ -30,6 +30,18 @@ export default function AllocationManager({
   const [productName, setProductName] = useState('');
   const [quantity, setQuantity] = useState<number>(10);
 
+  // Sync state values when branches arrive after mounting delay
+  React.useEffect(() => {
+    if (!fromBranch && branches.length > 0) {
+      setFromBranch(branches[0].branchName);
+    }
+    if (!toBranch && branches.length > 1) {
+      setToBranch(branches[1].branchName);
+    } else if (!toBranch && branches.length > 0) {
+      setToBranch(branches[0].branchName);
+    }
+  }, [branches, fromBranch, toBranch]);
+
   // Filter products belonging to 'fromBranch' to choose from
   const sourceProducts = products.filter(p => p.branch === fromBranch && p.status === 'active');
 

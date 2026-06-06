@@ -46,6 +46,13 @@ export default function CustomerPortal({
   // Completed Customer order (for live tracking window)
   const [placedOrder, setPlacedOrder] = useState<Order | null>(null);
 
+  // Sync selected branch name when branches list arrives after mounting delay
+  React.useEffect(() => {
+    if (!selectedBranchName && branches.length > 0) {
+      setSelectedBranchName(branches[0].branchName);
+    }
+  }, [branches, selectedBranchName]);
+
   // Active Branch Selected object
   const activeBranch = useMemo(() => {
     return branches.find(b => b.branchName === selectedBranchName) || null;

@@ -75,7 +75,98 @@ const DEFAULT_CATEGORIES: Category[] = [
   { id: 'cat-4', categoryName: 'Coolers & Milktea', sortOrder: 4 }
 ];
 
-const DEFAULT_PRODUCTS: Product[] = [];
+const DEFAULT_PRODUCTS: Product[] = [
+  {
+    id: 'prod-1-mk',
+    productName: 'Sizzling Pork Sisig w/ Egg',
+    category: 'Sizzling & Rice Meals',
+    sellingPrice: 149.00,
+    quantity: 50,
+    branch: 'Makati CBD',
+    status: 'active',
+    imageUrl: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=300&q=80'
+  },
+  {
+    id: 'prod-1-qc',
+    productName: 'Sizzling Pork Sisig w/ Egg',
+    category: 'Sizzling & Rice Meals',
+    sellingPrice: 149.00,
+    quantity: 45,
+    branch: 'Quezon City Hub',
+    status: 'active',
+    imageUrl: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=300&q=80'
+  },
+  {
+    id: 'prod-2-mk',
+    productName: 'Crispy Lechon Kawali Platter',
+    category: 'Classic Filipino Mains',
+    sellingPrice: 240.00,
+    quantity: 25,
+    branch: 'Makati CBD',
+    status: 'active',
+    imageUrl: 'https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&w=300&q=80'
+  },
+  {
+    id: 'prod-2-qc',
+    productName: 'Crispy Lechon Kawali Platter',
+    category: 'Classic Filipino Mains',
+    sellingPrice: 240.00,
+    quantity: 20,
+    branch: 'Quezon City Hub',
+    status: 'active',
+    imageUrl: 'https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&w=300&q=80'
+  },
+  {
+    id: 'prod-3-mk',
+    productName: 'Truffle Adobo Quarter Chicken',
+    category: 'Classic Filipino Mains',
+    sellingPrice: 189.00,
+    quantity: 30,
+    branch: 'Makati CBD',
+    status: 'active',
+    imageUrl: 'https://images.unsplash.com/photo-1598515214211-89d3e73ae83b?auto=format&fit=crop&w=300&q=80'
+  },
+  {
+    id: 'prod-4-mk',
+    productName: 'Special Halo-Halo Solo',
+    category: 'Desserts & Merienda',
+    sellingPrice: 95.00,
+    quantity: 60,
+    branch: 'Makati CBD',
+    status: 'active',
+    imageUrl: 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=300&q=80'
+  },
+  {
+    id: 'prod-4-qc',
+    productName: 'Special Halo-Halo Solo',
+    category: 'Desserts & Merienda',
+    sellingPrice: 95.00,
+    quantity: 55,
+    branch: 'Quezon City Hub',
+    status: 'active',
+    imageUrl: 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=300&q=80'
+  },
+  {
+    id: 'prod-5-mk',
+    productName: 'Classic Sagot Gulaman',
+    category: 'Coolers & Milktea',
+    sellingPrice: 65.00,
+    quantity: 100,
+    branch: 'Makati CBD',
+    status: 'active',
+    imageUrl: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=300&q=80'
+  },
+  {
+    id: 'prod-6-qc',
+    productName: 'Oreo Milktea Grande',
+    category: 'Coolers & Milktea',
+    sellingPrice: 110.00,
+    quantity: 80,
+    branch: 'Quezon City Hub',
+    status: 'active',
+    imageUrl: 'https://images.unsplash.com/photo-1541658016709-82535e94bc69?auto=format&fit=crop&w=300&q=80'
+  }
+];
 
 const DEFAULT_ORDERS: Order[] = [];
 

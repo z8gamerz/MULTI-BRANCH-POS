@@ -28,6 +28,13 @@ export default function ExpensesManager({
   const [description, setDescription] = useState('');
   const [amount, setAmount] = useState<number>(0);
 
+  // Sync state value when branches arrive after mounting delay
+  React.useEffect(() => {
+    if (!branchName && branches.length > 0) {
+      setBranchName(branches[0].branchName);
+    }
+  }, [branches, branchName]);
+
   const topCategory = useMemo(() => {
     if (expenses.length === 0) return 'None';
     const totals = expenses.reduce((acc, curr) => {

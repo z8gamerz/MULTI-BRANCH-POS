@@ -74,6 +74,31 @@ export default function InventoryManager({
   const [purCost, setPurCost] = useState<number>(5);
   const [purPrice, setPurPrice] = useState<number>(10);
 
+  // Sync state values when options arrays arrive after initial mounting delay
+  React.useEffect(() => {
+    if (!pCategory && categories.length > 0) {
+      setPCategory(categories[0].categoryName);
+    }
+  }, [categories, pCategory]);
+
+  React.useEffect(() => {
+    if (!pBranch && branches.length > 0) {
+      setPBranch(branches[0].branchName);
+    }
+  }, [branches, pBranch]);
+
+  React.useEffect(() => {
+    if (!purSupplier && suppliers.length > 0) {
+      setPurSupplier(suppliers[0].supplierName);
+    }
+  }, [suppliers, purSupplier]);
+
+  React.useEffect(() => {
+    if (!purBranch && branches.length > 0) {
+      setPurBranch(branches[0].branchName);
+    }
+  }, [branches, purBranch]);
+
   // Clean filtered lists
   const filteredProducts = useMemo(() => {
     return products.filter(p => p.productName.toLowerCase().includes(searchQuery.toLowerCase()));
